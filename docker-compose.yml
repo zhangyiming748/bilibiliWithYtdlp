@@ -6,6 +6,7 @@ services:
         container_name: ytdlp
         volumes:
             - ./cookies.txt:/cookies.txt
+            - path/to/save/videos:/data
         image: zhangyiming748/ytdlp
         command: ash
 # docker run -it --name ytdlp -v ./cookies.txt:/cookies.txt zhangyiming748/ytdlp ash
