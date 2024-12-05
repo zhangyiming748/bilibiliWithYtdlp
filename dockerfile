@@ -10,4 +10,4 @@ RUN pip install yt-dlp
 
 # 创建并编辑.ashrc 文件来定义别名（确保交互式 shell 中可用）
 RUN echo 'alias ytb="yt-dlp --cookies /cookies.txt"' >> /etc/profile
-RUN echo 'profile is run' >> /etc/profile
+RUN echo 'echo "profile is run"' >> /etc/profile
