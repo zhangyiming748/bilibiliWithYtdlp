@@ -1,0 +1,10 @@
+name: ytdlp
+services:
+    ytdlp:
+        stdin_open: true
+        tty: true
+        container_name: ytdlp
+        volumes:
+            - ./cookies.txt:/cookies.txt
+        image: zhangyiming748/ytdlp
+        command: ash
