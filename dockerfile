@@ -14,3 +14,4 @@ RUN echo 'alias ytb="yt-dlp --cookies /cookies.txt"' >> /root/.ashrc
 RUN echo 'if [ -n "$PS1" -a -r ~/.ashrc ]; then \. ~/.ashrc; fi' >> /root/.profile
 
 RUN echo 'echo "profile is run"' >> /etc/profile
+RUN echo 'echo "/root/profile is run"' >> /root/.ashrc

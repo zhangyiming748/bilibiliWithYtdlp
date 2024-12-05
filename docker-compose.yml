@@ -8,3 +8,4 @@ services:
             - ./cookies.txt:/cookies.txt
         image: zhangyiming748/ytdlp
         command: ash
+# docker run -it --name ytdlp -v ./cookies.txt:/cookies.txt zhangyiming748/ytdlp ash
