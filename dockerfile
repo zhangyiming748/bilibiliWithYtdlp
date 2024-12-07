@@ -12,4 +12,5 @@ RUN pip install yt-dlp
 RUN echo 'alias ytb="yt-dlp --cookies /cookies.txt --paths /data"' >> /etc/profile
 RUN echo 'echo "profile is run"' >> /etc/profile
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
