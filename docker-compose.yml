@@ -3,8 +3,8 @@ services:
     ytdlp:
         container_name: ytdlp
         volumes:
-            - ./cookies.txt:/cookies.txt
-            - ./list.txt:/list.txt
-            - path/to/save/videos:/data
+            - /path/to/save/cookies.txt:/cookies.txt
+            - /path/to/save/list.txt:/list.txt
+            - /path/to/save/videos:/data
         image: zhangyiming748/ytdlp
 # docker run -it --name ytdlp -v ./cookies.txt:/cookies.txt zhangyiming748/ytdlp ash
