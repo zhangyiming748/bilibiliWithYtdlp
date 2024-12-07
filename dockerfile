@@ -11,5 +11,5 @@ RUN pip install yt-dlp
 # 创建并编辑.ashrc 文件来定义别名（确保交互式 shell 中可用）
 RUN echo 'alias ytb="yt-dlp --cookies /cookies.txt --paths /data"' >> /etc/profile
 RUN echo 'echo "profile is run"' >> /etc/profile
-
-ENTRYPOINT [ "top" ]
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
