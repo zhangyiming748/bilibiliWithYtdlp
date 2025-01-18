@@ -4,3 +4,5 @@
 .fleet
 cookies.txt
 list.txt
+*.part
+*.mp4

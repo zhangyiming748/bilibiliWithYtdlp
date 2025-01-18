@@ -3,8 +3,7 @@ services:
     bili:
         container_name: bili
         volumes:
-            - /path/to/save/cookies.txt:/cookies.txt
-            - /path/to/save/list.txt:/list.txt
-            - /path/to/save/videos:/data
+            - /path/to/save/data:/data
+            - /path/to/save/videos:/videos
         image: zhangyiming748/bili
 # docker run -it --name ytdlp -v ./cookies.txt:/cookies.txt zhangyiming748/ytdlp ash

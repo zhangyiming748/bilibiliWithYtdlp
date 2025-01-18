@@ -1,7 +1,7 @@
 #!/bin/ash
 
 # 读取网址列表文件
-url_list="list.txt"
+url_list="/data/list.txt"
 
 # 按行读取网址列表
 while IFS= read -r url
@@ -15,6 +15,7 @@ do
   echo $name
   fname=${name}.mp4
   echo $fname
-  yt-dlp --cookies /cookies.txt -f 'bestvideo[height<=?1080]+bestaudio/best[height<=?1080]/mp4' --paths /data --output ${fname} $link
+  yt-dlp --cookies /data/cookies.txt -f 'bestvideo[height<=?1080]+bestaudio/best[height<=?1080]/mp4' --paths /videos --output ${fname} $link
 done < "$url_list"
+# yt-dlp --cookies cookies.txt -f 'bestvideo[height<=?1080]+bestaudio/best[height<=?1080]/mp4' https://www.bilibili.com/video/BV1eJ411B7to
 # 输入的字符串按照空格分割 空格前为真正的网址 空格后为文件名 shell实现
