@@ -17,5 +17,6 @@ do
   echo $fname
   yt-dlp --cookies /data/cookies.txt -f 'bestvideo[height<=?1080]+bestaudio/best[height<=?1080]/mp4' --paths /videos --output ${fname} $link
 done < "$url_list"
+echo "下载完成 尝试使用rsync上传到指定服务器"
 # yt-dlp --cookies cookies.txt -f 'bestvideo[height<=?1080]+bestaudio/best[height<=?1080]/mp4' https://www.bilibili.com/video/BV1eJ411B7to
 # 输入的字符串按照空格分割 空格前为真正的网址 空格后为文件名 shell实现

@@ -1,0 +1,9 @@
+name: bili
+services:
+    bili:
+        container_name: bili
+        volumes:
+            - ./data:/data
+            - ./videos:/videos
+        image: zhangyiming748/bili
+# docker run -it --name ytdlp -v ./cookies.txt:/cookies.txt zhangyiming748/ytdlp ash
