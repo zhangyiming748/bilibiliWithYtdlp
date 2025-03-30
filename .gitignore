@@ -6,3 +6,7 @@ cookies.txt
 list.txt
 *.part
 *.mp4
+/data/cookies.txt
+/data/list.txt
+/data/*.part
+/data/*.mp4
