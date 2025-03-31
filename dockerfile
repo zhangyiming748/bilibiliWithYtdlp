@@ -7,9 +7,9 @@ RUN apk update && \
     pip install --no-cache-dir yt-dlp && \
     rm -rf /var/cache/apk/* /root/.cache
 
-# 复制启动脚本
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# 设置别名
+RUN echo 'alias ytb="yt-dlp --cookies /data/cookies.txt"' >> /etc/profile.d/aliases.sh && \
+    chmod +x /etc/profile.d/aliases.sh
 
-ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
+CMD [ "ash" ]
 # docker build -t bili:latest .
