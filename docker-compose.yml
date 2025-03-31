@@ -10,5 +10,5 @@ services:
         volumes:
             - ./data:/data
             - ./videos:/videos
-        image: zhangyiming748/bili:v0.0.19
+        image: zhangyiming748/bili:v0.0.20
 # docker run -it --name ytdlp -v ./cookies.txt:/cookies.txt zhangyiming748/ytdlp ash
