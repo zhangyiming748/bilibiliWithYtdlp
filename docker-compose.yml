@@ -2,8 +2,13 @@ name: bili
 services:
     bili:
         container_name: bili
+        tty: true
+        stdin_open: true
+        command: ash
+        environment:
+            - ENV=/root/.ashrc
         volumes:
-            - /path/to/save/data:/data
-            - /path/to/save/videos:/videos
-        image: zhangyiming748/bili
+            - ./data:/data
+            - ./videos:/videos
+        image: zhangyiming748/bili:v0.0.19
 # docker run -it --name ytdlp -v ./cookies.txt:/cookies.txt zhangyiming748/ytdlp ash

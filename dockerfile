@@ -8,8 +8,8 @@ RUN apk update && \
     rm -rf /var/cache/apk/* /root/.cache
 
 # 设置别名
-RUN echo 'alias ytb="yt-dlp --cookies /data/cookies.txt"' >> /etc/profile.d/aliases.sh && \
-    chmod +x /etc/profile.d/aliases.sh
+RUN echo 'alias ytb="yt-dlp --cookies /data/cookies.txt"' >> /root/.ashrc && \
+    echo "echo 'ashrc is running'" >> /root/.ashrc
 
 CMD [ "ash" ]
 # docker build -t bili:latest .
